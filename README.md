@@ -34,7 +34,7 @@ git remote add sync ===<ADD_GITHUB_URL_HERE>===
 - Verify what are the remotes currently has been setup for your repo. This following command should show "fetch" and "push" for two remotes i.e. "origin" and "sync"
 
 ```sh
-git remove -v
+git remote -v
 ```
 
 - First pull from GitHub using the "sync" remote
@@ -49,18 +49,6 @@ git pull sync
 git branch --track optima sync/main
 ```
 
-- Switch to the new branch
-
-```sh
-git checkout optima
-```
-
-- Create new "main" branch branched out of "optima" branch
-
-```sh
-git checkout -b main
-```
-
 - Push local "main" branch to "origin" remote VCS
 
 ```sh
@@ -71,19 +59,21 @@ git push -u origin main
 
 Assignment submissions must be delivered to Optima Partners as a Pull Request into the original repository.
 
-The branch nameing convention for your PR should be as follows:<br> 
+The branch nameing convention for your PR should be as follows:<br>
 `submission/assignment_name/firstname_lastname_dayOfMonth`
 
 E.g.<br>
+
 - If the assignments directory name is `api_assignment`.
 - Your fist name is `Joe`.
-- Your last name is `Blogs`. 
+- Your last name is `Blogs`.
 - It is the 16th of the month. the branch name should be:<br>
- `submission/api_assignment/Joe_Blogs_16`
+  `submission/api_assignment/Joe_Blogs_16`
 
 As part of the Pull Request submission, you will be asked to:
+
 - Fill out a brief description of your solution:
   - What question it answers.
-  - What requirements your solution has achieved. 
+  - What requirements your solution has achieved.
 
 Your submission will be marked against the requirements that the Pull Request says have been met. Any supporting documentation that is provided will also be taken into account.
