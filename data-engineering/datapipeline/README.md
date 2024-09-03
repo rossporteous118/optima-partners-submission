@@ -38,7 +38,7 @@ Develop a data pipeline (or several) using Python that will perform the followin
 
 
 
-## Stretch goals;
+## Stretch goals
 - Include unit tests for all functions
 - While this assignmment does not require you to deploy to a cloud provider, the solution would eventually require this. Add some notes to your documentation about the tools you might use to deploy this pipeline to a cloud provider of your choice and what kind of considerations you'd need to make in doing so.
 - For all races and sprint races, add the following data:
