@@ -7,7 +7,7 @@ Optima has been hired by a motorsport analytics Youtube channel who are looking 
 - Develop a data pipeline that produces JSON files which have the same structure as below.
 - Each element in the list should be for one race from the `races.csv` file.
 - You should produce one file per year available in the source data.
-- Your JSONs should be called `stats_{year}.json` for each year and be placed in the `results` folder. 
+- Your JSON files should be called `stats_{year}.json` for each year and be placed in the `results` folder. 
   - For example for 2024, the file should be called `stats_2024.json`.
 - As an example for a 2024 race:
 ```
