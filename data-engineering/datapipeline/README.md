@@ -9,15 +9,15 @@ Optima has been hired by a motorsport analytics Youtube channel who are looking 
 - You should produce one file per year available in the source data.
 - Your JSONs should be called `stats_{year}.json` for each year and be placed in the `results` folder. 
   - For example for 2024, the file should be called `stats_2024.json`.
-
+- As an example for a 2024 race:
 ```
   [
 	  {
-		  "Race Name": "Race Name here",
-		  "Race Round": Race Number here,
-		  "Race Datetime": "Race Datetime here in ISO8601 format",
-		  "Race Winning driverId": Race Winning driverID number here,
-		  "Race Fastest Lap": "Fastest Lap TIme here in ISO8601 format"
+		  "Race Name": "British Grand Prix",
+		  "Race Round": 12,
+		  "Race Datetime": "2024-07-07T14:00:00.000",
+		  "Race Winning driverId": 1,
+		  "Race Fastest Lap": "01:29.4"
 	  },
 	  ...
   ]
