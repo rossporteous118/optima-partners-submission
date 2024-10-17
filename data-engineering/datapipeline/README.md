@@ -4,7 +4,7 @@
 Optima has been hired by a motorsport analytics Youtube channel who are looking to do rapid analysis of Formula 1 for their viewers. The company wants to have some automated data pipelines in place to perform automated transformation of incoming datasets immediately following races.
 
 ## Objective
-- Develop a data pipeline that produces a JSON that has the same structure as below.
+- Develop a data pipeline that produces JSON files which have the same structure as below.
 - Each element in the list should be for one race from the `races.csv` file.
 - You should produce one file per year available in the source data.
 - Your JSONs should be called `stats_{year}.json` for each year and be placed in the `results` folder. 
