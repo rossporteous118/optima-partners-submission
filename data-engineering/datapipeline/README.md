@@ -16,7 +16,7 @@ Optima has been hired by a motorsport analytics Youtube channel who are looking 
 		  "Race Name": "Race Name here",
 		  "Race Round": Race Number here,
 		  "Race Datetime": "Race Datetime here in ISO8601 format",
-		  "Race Winning driverId": "Race Datetime here in RFC3339 format",
+		  "Race Winning driverId": Race Winning driverID number here,
 		  "Race Fastest Lap": "Fastest Lap TIme here in ISO8601 format"
 	  },
 	  ...
