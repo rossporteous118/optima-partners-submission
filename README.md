@@ -1,5 +1,7 @@
 # Optima Partners Engineering Interview Assignments
 
+[![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
+
 Welcome to the Optima Partners Engineering interview assignment repository! Here you will find the assignment that you have been asked to complete as part of the interview process.
 
 ## Contents
@@ -71,19 +73,21 @@ git push -u origin main
 
 Assignment submissions must be delivered to Optima Partners as a Pull Request into the original repository.
 
-The branch nameing convention for your PR should be as follows:<br> 
+The branch nameing convention for your PR should be as follows:<br>
 `submission/assignment_name/firstname_lastname_dayOfMonth`
 
 E.g.<br>
+
 - If the assignments directory name is `api_assignment`.
 - Your fist name is `Joe`.
-- Your last name is `Blogs`. 
+- Your last name is `Blogs`.
 - It is the 16th of the month. the branch name should be:<br>
- `submission/api_assignment/Joe_Blogs_16`
+  `submission/api_assignment/Joe_Blogs_16`
 
 As part of the Pull Request submission, you will be asked to:
+
 - Fill out a brief description of your solution:
   - What question it answers.
-  - What requirements your solution has achieved. 
+  - What requirements your solution has achieved.
 
 Your submission will be marked against the requirements that the Pull Request says have been met. Any supporting documentation that is provided will also be taken into account.
