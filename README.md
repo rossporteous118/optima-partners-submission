@@ -36,7 +36,7 @@ git remote add sync ===<ADD_GITHUB_URL_HERE>===
 - Verify what are the remotes currently has been setup for your repo. This following command should show "fetch" and "push" for two remotes i.e. "origin" and "sync"
 
 ```sh
-git remove -v
+git remote -v
 ```
 
 - First pull from GitHub using the "sync" remote
@@ -49,18 +49,6 @@ git pull sync
 
 ```sh
 git branch --track optima sync/main
-```
-
-- Switch to the new branch
-
-```sh
-git checkout optima
-```
-
-- Create new "main" branch branched out of "optima" branch
-
-```sh
-git checkout -b main
 ```
 
 - Push local "main" branch to "origin" remote VCS
