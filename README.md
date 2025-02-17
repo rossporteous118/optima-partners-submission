@@ -4,8 +4,8 @@ Welcome to the Optima Partners Engineering interview assignment repository! Here
 
 ## Contents
 
-[Completing Assignments](#completing-assignments)<br>
-[Cloning the Repo](#cloning-the-repo)<br>
+[Assignment Setup](#assignment-setup)<br>
+[Completing the Assignment](#completing-the-assignment)<br>
 [Submissions](#submissions)
 
 ## Assignment Setup
@@ -17,6 +17,13 @@ You will find detailed instructions for your assignment in its dedicated README.
 ### Setting up the Repo
 
 1. Clone the assignment repository to your local machine using the following command:
+
+```bash
+git clone https://github.com/optima-partners/engineering-recruitment-assignments.git
+```
+
+2. Create a repository in your personal VCS account. Copy the URL of the repo you just created.
+*Note*: This repo must be publicly accessible. 
 
 ```bash
 git clone https://github.com/optima-partners/engineering-interview-assignments.git
@@ -43,7 +50,7 @@ There are two levels of requirements for each assignment:
 
 ### Pushing your code to the submission repo
 
-1. Commit and push your code to the submission repo.
+1. Commit and push your code to the submission repo. *Note*: You must push your code to the `main` branch as this is the branch we will look to for your solution.
 
 ```bash
 git push -u submission main
@@ -53,7 +60,8 @@ git push -u submission main
 
 ### Submitting the Assignment
 
-To submit your assignment you must push your source code into a repo in your personal VCS account. For your assignment to be considered as submitted, you must inform Optima Partners by emailing engineering.recruitment@optimapartners.co.uk with a link to your repo.
+To submit your assignment you must push your source code into a repo in your personal VCS account. For your assignment to be considered as submitted, you must inform Optima Partners by emailing engineeringrecruitment@optimapartners.co.uk with a link to your repo.
+
 
 You should add the following information to the solution README.md file in the `solution` directory:
 
@@ -63,4 +71,4 @@ You should add the following information to the solution README.md file in the `
 
 ### Marking of submissions
 
-Your submission will be marked against the requirements that the README.md file says have been met. Any supporting documentation that is provided will also be taken into account.
+Your submission will be marked against the requirements that the solution README.md file says have been met. Any supporting documentation that is provided will also be taken into account.
