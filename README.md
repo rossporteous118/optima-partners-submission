@@ -1,81 +1,66 @@
 # Optima Partners Engineering Interview Assignments
 
-[![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
-
 Welcome to the Optima Partners Engineering interview assignment repository! Here you will find the assignment that you have been asked to complete as part of the interview process.
 
 ## Contents
 
 [Completing Assignments](#completing-assignments)<br>
-[Forking the Repo](#forking-the-repo)<br>
+[Cloning the Repo](#cloning-the-repo)<br>
 [Submissions](#submissions)
 
-## Completing Assignments
+## Assignment Setup
 
-Before attempting to complete the assignment you must first [fork this repository](#forking-the-repo) to your personal account in your preferred version control system. GitHub is the easiest to use for these assignments but it is possible to use another VCS.
-
-Ensure you commit and push often so that we can have visibilty of your development process.
+Before attempting to complete the assignment you must first [clone this repository](#cloning-the-repo) to your personal account in your preferred Version Control System (VCS). GitHub is the easiest to use for these assignments but it is possible to use another VCS.
 
 You will find detailed instructions for your assignment in its dedicated README.md file.
 
-### Forking the Repo
+### Setting up the Repo
 
-- Go to your VCS account and create a new repository (its better to have an empty repo)
+1. Clone the assignment repository to your local machine using the following command:
 
-```sh
-git clone <clone_path>
-cd <repo_name>
+```bash
+git clone https://github.com/optima-partners/engineering-interview-assignments.git
 ```
 
-- Now add Github repo as a new remote in your VCS called "sync"
+2. Create a repository in your personal VCS account. Copy the URL of the repo you just created.
 
-```sh
-git remote add sync ===<ADD_GITHUB_URL_HERE>===
+3. Add the repo you just created to the cloned repository as a remote.
+
+```bash
+git remote add submission <your_repo_url>
 ```
 
-- Verify what are the remotes currently has been setup for your repo. This following command should show "fetch" and "push" for two remotes i.e. "origin" and "sync"
+## Completing the Assignment
 
-```sh
-git remote -v
-```
+### Assignment Requirements
 
-- First pull from GitHub using the "sync" remote
+There are two levels of requirements for each assignment:
 
-```sh
-git pull sync
-```
+- **Core Requirements**: These are the minimum requirements that must be met for the assignment to be considered as complete. All candidates should attempt these requirements.
+- **Stretch Requirements**: These are optional requirements that can be met to demonstrate a higher level of understanding of the assignment. 
+  - Candidates for the Core Engineer role are encouraged to attempt these requirements but it is not mandatory. 
+  - Candidates for the Senior Engineer role are expected to attempt these requirements.
 
-- Setup local "optima" branch to track "sync" remote's "main" branch
+### Pushing your code to the submission repo
 
-```sh
-git branch --track optima sync/main
-```
+1. Commit and push your code to the submission repo.
 
-- Push local "main" branch to "origin" remote VCS
-
-```sh
-git push -u origin main
+```bash
+git push -u submission main
 ```
 
 ## Submissions
 
-Assignment submissions must be delivered to Optima Partners as a Pull Request into the original repository.
+### Submitting the Assignment
 
-The branch nameing convention for your PR should be as follows:<br>
-`submission/assignment_name/firstname_lastname_dayOfMonth`
+To submit your assignment you must push your source code into a repo in your personal VCS account. For your assignment to be considered as submitted, you must inform Optima Partners by emailing engineering.recruitment@optimapartners.co.uk with a link to your repo.
 
-E.g.<br>
+You should add the following information to the solution README.md file in the `solution` directory:
 
-- If the assignments directory name is `api_assignment`.
-- Your fist name is `Joe`.
-- Your last name is `Blogs`.
-- It is the 16th of the month. the branch name should be:<br>
-  `submission/api_assignment/Joe_Blogs_16`
+- A description of the solution you have provided
+- A list of requirements that you have met
+- Any supporting documentation that you have provided
 
-As part of the Pull Request submission, you will be asked to:
+### Marking of submissions
 
-- Fill out a brief description of your solution:
-  - What question it answers.
-  - What requirements your solution has achieved.
-
-Your submission will be marked against the requirements that the Pull Request says have been met. Any supporting documentation that is provided will also be taken into account.
+Your submission will be marked against the requirements that the README.md file says have been met. Any supporting documentation that is provided will also be taken into account.
