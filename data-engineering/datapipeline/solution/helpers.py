@@ -11,7 +11,7 @@ def read_csv_into_dataframe(filepath: str) -> pd.DataFrame:
     :raises RuntimeError: If the file does not exist or cannot be read.
     """
     if not os.path.isfile(filepath):
-        raise RuntimeError(f"File does not exist: {filepath}")
+        raise FileNotFoundError(f"File does not exist: {filepath}")
 
     try:
         return pd.read_csv(filepath)
