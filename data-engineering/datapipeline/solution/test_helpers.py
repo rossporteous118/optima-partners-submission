@@ -1,7 +1,6 @@
 import pytest
 import os 
 import pandas as pd
-from unittest.mock import patch, mock_open
 from helpers import read_csv_into_dataframe, validate_dataframe_columns
 
 class TestReadCsvIntoDataFrame:

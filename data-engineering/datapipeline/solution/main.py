@@ -36,12 +36,12 @@ def run_pipeline():
     races_df['Race Datetime'] = pd.to_datetime(races_df['date'] + ' ' + races_df['time'])
     races_df['Race Datetime'] = races_df['Race Datetime'].dt.strftime('%Y-%m-%dT%H:%M:%S.000')
     
-    logger.info(f"Races data processing complete")
+    logger.info(f"Processed races data")
 
     # Filter results DataFrame for race winners
     results_df = results_df[results_df["position"] == 1]
-    
-    logger.info(f"Results data processing complete")
+
+    logger.info(f"Processed results data")
 
     # Combine DataFrames
     merged_df = races_df.merge(results_df[["raceId", "driverId", "fastestLapTime"]], how="left", on="raceId")
