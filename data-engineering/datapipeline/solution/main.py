@@ -17,7 +17,7 @@ RACES_FILENAME = "races.csv"
 RESULTS_FILENAME = "results.csv"
 
 
-def run_pipeline():
+def run_pipeline() -> None:
     # Read source CSV files into a Pandas DataFrame
     races_path = os.path.join(SOURCE_DIR, RACES_FILENAME)
     races_df = read_csv_into_dataframe(races_path)
@@ -36,12 +36,12 @@ def run_pipeline():
     races_df['Race Datetime'] = pd.to_datetime(races_df['date'] + ' ' + races_df['time'])
     races_df['Race Datetime'] = races_df['Race Datetime'].dt.strftime('%Y-%m-%dT%H:%M:%S.000')
     
-    logger.info(f"Processed races data")
+    logger.info(f"Formatted races data")
 
     # Filter results DataFrame for race winners
-    results_df = results_df[results_df["position"] == 1]
+    results_df = results_df[results_df["position"] == 1].copy()
 
-    logger.info(f"Processed results data")
+    logger.info(f"Filtered results data")
 
     # Combine DataFrames
     merged_df = races_df.merge(results_df[["raceId", "driverId", "fastestLapTime"]], how="left", on="raceId")
@@ -60,11 +60,12 @@ def run_pipeline():
     merged_df["Race Round"] = merged_df["Race Round"].astype(int)
     merged_df["Race Winning driverId"] = merged_df["Race Winning driverId"].astype('Int64') 
 
-    # Save data in JSON format with a separate file for each year
+    # Save data in JSON format in a file for each year
+    os.makedirs(RESULTS_DIR, exist_ok=True)
     for year, group_df in merged_df.groupby("year"):
         group_df = group_df[["Race Name", "Race Round", "Race Datetime", "Race Winning driverId", "Race Fastest Lap"]]
         filepath = os.path.join(RESULTS_DIR, f"stats_{year}.json")
-        group_df.to_json(filepath, orient="records")
+        group_df.to_json(filepath, orient="records", indent=2, force_ascii=False)
 
         logger.info(f"Saved {len(group_df)} records for {year}")
 
@@ -73,5 +74,5 @@ if __name__ == "__main__":
     try:
         run_pipeline()
         logger.info("Pipeline ran successfully")
-    except Exception as e:
-        logger.exception(f"Pipeline failed with exception:")
+    except Exception:
+        logger.exception(f"Pipeline failed")

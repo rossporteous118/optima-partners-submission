@@ -8,11 +8,13 @@
 git clone https://github.com/rossporteous118/optima-partners-submission.git
 ```
 
-2. Create and activate a virtual machine to avoid a dependency clash
+2. Create and activate a virtual environment to isolate dependencies (optional)
 
 ```bash
 python3 -m venv venv
+
 source venv/bin/activate    # MacOS / Linux
+
 venv\Scripts\activate       # Windows
 ```
 
@@ -44,7 +46,7 @@ I have created two custom auxiliary functions for use in my Python pipeline that
 
 When deploying this pipeline to a cloud environment there are several important considerations that would need to be made.
 
-One consideration would be around the volume of data we expect to be processed within this pipeline. In this case, the volume of data is relatively small and therefore we could use a serverless compute cloud service such as AWS Lambda to execute our Python scripts and process our data. This approach would remain extremely cheap and would be able to comfortably handle the relatively small amount of data being processed. However, if we expected the volume of data to increase significantly then a distributed computing framework may need to be employed to handle the increased data volume.
+One consideration would be around the volume of data we expect to be processed within this pipeline. In this case, the volume of data is relatively small. Due to this, we could use a serverless compute cloud service such as AWS Lambda to execute our Python scripts and process our data. This approach would remain extremely cheap and would be able to comfortably handle the relatively small amount of data being processed. However, if we expected the volume of data to increase significantly then a distributed computing framework may need to be employed to handle the increased data volume. In this case, the Python pipeline may need to be modified to use PySpark instead of Pandas as PySpark is designed to efficiently process large datasets across distributed machines. This approach would also incur greater costs as more compute resources would be required and additonal tools such as AWS Glue may be needed to manage the more complex compute infrastructure.
 
 Another consideration is how we intend to store our data. At the moment, our pipeline simply saves JSON files to a local folder which would not be suitable for a production environment. One good option here would be to utilise an object store such as AWS S3 to store our output JSON files. A cloud object store would be a good option here as they have very high scalability and low costs without enforcing a strict schema. These features lend themselves well to the semi-structured JSON files we are working with as we can save large quantities of data without worrying about conforming to a rigid schema.
 
